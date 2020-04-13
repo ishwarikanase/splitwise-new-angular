@@ -1,0 +1,30 @@
+<hr class="mx-0 my-0">
+<div class="row">
+    <div class="col d-inline border-right text-center">total balance<div [style.color]="owe>owed?'red':'green'">₹
+            {{total | number:'3.2-2'}}</div>
+    </div>
+    <div class="col d-inline border-right text-center">you owe<div style="color:red;">₹ {{owe}}</div>
+    </div>
+    <div class="col d-inline text-center">you are owed<div style="color:green;">₹ {{owed}}</div>
+    </div>
+</div>
+<hr class="mx-0 my-0">
+<div class="row mx-0">
+    <div class="col-6 border-right">
+        <div class="font-weight-bold text-secondary">YOU OWE</div>
+        <div *ngFor="let item of list" class="items">
+            <div *ngIf="(item.owe > item.owed)" (click)="show()">{{item.name}}<div class="text-danger">you owe ₹
+                    {{item.owe-item.owed}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-right">
+        <div class="font-weight-bold text-secondary">YOU ARE OWED</div>
+        <div *ngFor="let item of list" class="text-left items">
+            <div *ngIf="(item.owed > item.owe)">{{item.name}}<div class="text-success">owes you
+                    ₹ {{item.owed-item.owe}}</div>
+            </div>
+        </div>
+    </div>
+</div>

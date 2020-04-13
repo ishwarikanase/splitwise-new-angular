@@ -1,0 +1,22 @@
+.menu {
+  cursor: pointer;
+}
+.menu:hover,
+.menu:active {
+  color: green;
+  background-color: lightgrey;
+  font-style: italic;
+}
+::ng-deep {
+  .ui-dialog {
+    .ui-dialog-titlebar {
+      background-color: green !important;
+    }
+    .ui-dialog-title{
+      color: white;
+    }
+    .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+      color: white !important;
+    }
+  }
+}

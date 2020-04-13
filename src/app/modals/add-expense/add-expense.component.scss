@@ -1,0 +1,43 @@
+::ng-deep {
+    .ui-chips {
+        width: 100% !important;
+        border: none !important;
+        .ui-inputtext {
+            width: 100% !important;
+            border: none !important;
+            box-shadow: none !important;
+            .ui-chips-token {
+                background-color: gray !important;
+            }
+            .ui-chips-input-token input {
+                font-size: 20px !important;
+                line-height: 3 !important;
+            }
+        }
+    }
+    .ui-calendar {
+        .ui-inputtext {
+            border: none !important;
+            box-shadow: none !important;
+            border-bottom: 1px solid gray !important;
+        }
+    }
+}
+.splitLine {
+    line-height: 3;
+}
+.name {
+    font-size: 20px;
+    line-height: 3;
+}
+input {
+    outline: none !important;
+    border: none !important;
+    width: 100%;
+    line-height: 3;
+    font-size: 20px;
+}
+
+.splitBtn {
+    border-radius: 25px;
+}
